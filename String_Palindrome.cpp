@@ -18,3 +18,29 @@ public:
         return 1;
     }
 };
+
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        int right=s.length()-1;
+        int left=0;
+        
+        while(left<right)
+        {
+            while(!isalnum(s[left]) && left<right)
+            left++;
+
+            while(!isalnum(s[right]) && left<right)
+            right--;
+
+            if(tolower(s[left]) != tolower(s[right]))
+            return 0;
+
+            left++;
+            right--;
+        }
+
+        return 1;
+    }
+};
