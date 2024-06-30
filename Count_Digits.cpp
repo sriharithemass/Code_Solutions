@@ -12,3 +12,11 @@ public:
         return count;
     }
 };
+
+class Solution{
+public:
+    int evenlyDivides(int N){
+        
+        return log10(N)+1;
+    }
+};
